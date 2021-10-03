@@ -24,17 +24,30 @@ A Colorado Board of Elections employee requested the followiong tasks be complet
 
 ## Election-Audit Summary
 This script can easily be utilized for other elections by making a couple of small changes: 
+
 * Updating the source data file (e.g., "election_results.csv") on row 9 of the script:
-     file_to_load = os.path.join("Resources", "election_results.csv")
+ 
+   file_to_load = os.path.join("Resources", "election_results.csv")
+     
 * Updating the output file (e.g., "election_results.txt") for the results on row 11 of the script:
+
      file_to_save = os.path.join("analysis", "election_results.txt")
 
 Future enhancements to this script may include: 
-1. Rounding precision:  The Candidate vote percentages above do not total 100% due to rounding. Increasing the precision to .2f fixes this issue.
-candidate_results = (
+
+1. Improving rounding precision:  The candidate vote percentages above do not total 100% due to rounding to one decimal place (.1f). Increasing the precision to two decimal place (.2f) fixes this issue.
+
+_find code box formatting and include image of 2 decimal results._
+    candidate_results = (
                 f"{candidate_name}: {vote_percentage:.2f}% ({votes:,})\n")
-1.Determining how many votes each candidate received within each county and the percentage of the county's total.
-1.Adding a congressional district dictionary that includes the district and county.  If the whole state's election results are included in a single source file, the result summaries above could be tabulated by congressional district.
+                
+1. Determining how many votes each candidate received within each county and the percentage of the county's total.
+
+   _insert table with mocked up results
+   
+1. Adding a congressional district dictionary that includes the district and county.  If the whole state's election results are included in a single source file, the result summaries above could be tabulated by congressional district.
+
+_insert table with mocked up results_
 
 ___
 ## Resources
