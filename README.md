@@ -28,7 +28,7 @@ ___
 ## Resources
 Data Source: https://github.com/SJLewer/Election_Analysis/tree/main/Resources
 
-Data Analysis: 
+Data Analysis: https://github.com/SJLewer/Election_Analysis/tree/main/analysis
 
 Software Script: 
 
