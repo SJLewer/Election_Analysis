@@ -18,14 +18,24 @@ A Colorado Board of Elections employee requested the followiong tasks be complet
 
      ![CountyVotes](https://user-images.githubusercontent.com/90986041/135736602-081c9211-3954-467a-beaf-124104c9a9bc.png)
 
-* _Candidate Results_: Diana DeGette easily won the election, receiving 73.8% (272,892) of the total votes cast.  As shown below, Charles Casper Stockholm was a distant second with 23.0% of the votes, followed by Raymon Anthony Doane with 3.1%.
+* _Candidate Results_: Diana DeGette easily won the election, receiving 73.8% (272,892) of the total votes cast.  As shown below, Charles Casper Stockholm was a distant second with 23.0% of the votes, followed by Raymon Anthony Doane with 3.1%.  
  
      ![CandidateVotes](https://user-images.githubusercontent.com/90986041/135736572-b93c699f-6947-4382-abec-2686ac56fa91.png)
 
 ## Election-Audit Summary
-_business proposal how can this script be used for other elections
-at least 2 examples of how this script can be modified to use for other elections.
-_
+This script can easily be utilized for other elections by making a couple of small changes: 
+* Updating the source data file (e.g., "election_results.csv") on row 9 of the script:
+     file_to_load = os.path.join("Resources", "election_results.csv")
+* Updating the output file (e.g., "election_results.txt") for the results on row 11 of the script:
+     file_to_save = os.path.join("analysis", "election_results.txt")
+
+Future enhancements to this script may include: 
+1. Rounding precision:  The Candidate vote percentages above do not total 100% due to rounding. Increasing the precision to .2f fixes this issue.
+candidate_results = (
+                f"{candidate_name}: {vote_percentage:.2f}% ({votes:,})\n")
+1.Determining how many votes each candidate received within each county and the percentage of the county's total.
+1.Adding a congressional district dictionary that includes the district and county.  If the whole state's election results are included in a single source file, the result summaries above could be tabulated by congressional district.
+
 ___
 ## Resources
 _Data Source_: https://github.com/SJLewer/Election_Analysis/tree/main/Resources
