@@ -26,7 +26,10 @@ at least 2 examples of how this script can be modified to use for other election
 _
 ___
 ## Resources
-Data Source:  _insert link to data file_
+Data Source: https://github.com/SJLewer/Election_Analysis/tree/main/Resources
+
 Data Analysis: 
-Software: _insert software info_
+
+Software Script: 
+
 Analyst: S. Lewer
