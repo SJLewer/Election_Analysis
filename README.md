@@ -23,7 +23,11 @@ A Colorado Board of Elections employee requested the followiong tasks be complet
      ![CandidateVotes](https://user-images.githubusercontent.com/90986041/135736572-b93c699f-6947-4382-abec-2686ac56fa91.png)
 
 ## Election-Audit Summary
-This script can easily be utilized for other elections by making a couple of small changes: 
+Candidates and their supporters anxiously await the results after each election.  Historically, election results have been manually tabulated and analyzed.  Manually processing large amounts of information is not only time-consuming, it is prone to error.  The introduction of this script is a game-changer! It accurately reads the data files, tabulates the vote counts, and analyzes the results within seconds.
+
+In its current state, the script processes data for one district at a time using a source file called "election_results.csv" and an output file called "elelction_results.txt".  
+
+With minor modifications it can be utilized for other elections: 
 
 * Updating the source data file (e.g., "election_results.csv") on row 9 of the script:
  
@@ -35,7 +39,7 @@ This script can easily be utilized for other elections by making a couple of sma
 
 Future enhancements to this script may include: 
 
-1. Improving rounding precision:  The candidate vote percentages above do not total 100% due to rounding to one decimal place (.1f). Increasing the precision to two decimal place (.2f) fixes this issue.
+1. Improving rounding precision:  The candidate vote percentages above do not total 100% due to rounding to one decimal place (.1f). Increasing the precision to two decimal places (.2f) fixes this issue.
 
 _find code box formatting and include image of 2 decimal results._
     candidate_results = (
