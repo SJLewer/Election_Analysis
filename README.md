@@ -23,9 +23,9 @@ A Colorado Board of Elections employee requested the followiong tasks be complet
      ![CandidateVotes](https://user-images.githubusercontent.com/90986041/135736572-b93c699f-6947-4382-abec-2686ac56fa91.png)
 
 ## Election-Audit Summary
-Candidates and their supporters anxiously await the results after each election.  Historically, election results have been manually tabulated and analyzed.  Manually processing large amounts of information is not only time-consuming, it is prone to error.  The introduction of this script is a game-changer! It accurately reads the data files, tabulates the vote counts, and analyzes the results within seconds.
+Candidates and their supporters anxiously await the results after each election.  Historically, election results have been manually tabulated and analyzed using Excel.  Manually processing large amounts of information is not only time-consuming, it is prone to error.  The introduction of this Python script is a game-changer! It accurately reads the data files, tabulates the vote counts, and analyzes the results automatically within seconds.  Additionally, it's use can be expanded for other congressional precincts, senatorial precincts, and local races. 
 
-In its current state, the script processes data for one district at a time using a source file called "election_results.csv" and an output file called "election_results.txt".  
+In its current state, the script processes data for one precinct at a time using a source file called "election_results.csv" and an output file called "election_results.txt".  
 
 With minor modifications it can be utilized for other elections: 
 
