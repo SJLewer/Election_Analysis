@@ -14,7 +14,7 @@ A Colorado Board of Elections employee requested the followiong tasks be complet
  1. Determine the winner of the election based on popular vote
 
 ## Election-Audit Results:
-* _Voter Turnout_: In total there were 369,711 votes cast.  As shown below, Denver county had the largest turnout (82.8%).
+* _Voter Turnout_ : In total there were 369,711 votes cast.  As shown below, Denver county had the largest turnout (82.8%).
 
      ![CountyVotes](https://user-images.githubusercontent.com/90986041/135736602-081c9211-3954-467a-beaf-124104c9a9bc.png)
 
@@ -25,26 +25,31 @@ A Colorado Board of Elections employee requested the followiong tasks be complet
 ## Election-Audit Summary
 Candidates and their supporters anxiously await the results after each election.  Historically, election results have been manually tabulated and analyzed using Excel.  Manually processing large amounts of information is not only time-consuming, it is prone to error.  The introduction of this Python script is a game-changer! It accurately reads the data files, tabulates the vote counts, and analyzes the results automatically within seconds.  Additionally, it's use can be expanded for other congressional precincts, senatorial precincts, and local races. 
 
-In its current state, the script processes data for one precinct at a time using a source file called "election_results.csv" and an output file called "election_results.txt".  
+In its current state, the script processes data for one precinct at a time using a source file called "election_results.csv" and an output file called "election_results.txt". With minor modifications this script can be utilized for other elections: 
 
-With minor modifications it can be utilized for other elections: 
+1) Allow the user to enter the unique .csv data filename and the unique .txt output filename for each district being audited.  
+```
+# Ask user to enter names of data input file and output file
+fToLfile = input("Please enter .csv data filename (ex. d1_election_results.csv): ")
+fToSfile = input("Please enter .txt output filename (ex. d1_election_results.txt): ")
 
-* Updating the source data file (e.g., "election_results.csv") on row 9 of the script:
- 
-   file_to_load = os.path.join("Resources", "election_results.csv")
-     
-* Updating the output file (e.g., "election_results.txt") for the results on row 11 of the script:
+# Add a variable to load a file from a path.
+file_to_load = os.path.join("Resources", fToLfile)
 
-     file_to_save = os.path.join("analysis", "election_results.txt")
+# Add a variable to save the file to a path.
+file_to_save = os.path.join("analysis", fToSfile)
+  
+```     
 
 Future enhancements to this script may include: 
 
 1. Improving rounding precision:  The candidate vote percentages above do not total 100% due to rounding to one decimal place (.1f). Increasing the precision to two decimal places (.2f) fixes this issue.
-
-_find code box formatting and include image of 2 decimal results._
+```
     candidate_results = (
                 f"{candidate_name}: {vote_percentage:.2f}% ({votes:,})\n")
-                
+```             
+     ![Candidate2fVotes](https://user-images.githubusercontent.com/90986041/136293135-3e198e0d-c20e-4dda-9ec5-634922bf097b.png)
+
 1. Determining how many votes each candidate received within each county and the percentage of the county's total.
 
    _insert table with mocked up results
